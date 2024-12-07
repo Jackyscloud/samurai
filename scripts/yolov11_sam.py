@@ -10,7 +10,7 @@ sys.path.append("./sam2")
 from sam2.build_sam import build_sam2_video_predictor
 from ultralytics import YOLO
 
-model = YOLO('/home/jackyzz11/Desktop/Yolo_Model/Yolov11_v3_21000.pt')
+model = YOLO('/home/jacky/Desktop/samurai/Yolo_Model/Yolov11_v3_21000.pt')
 color = [(255, 0, 0)]
 
 def load_txt(gt_path):
@@ -146,7 +146,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", default="/home/jackyzz11/Desktop/UAV_IR/20190925_111757_1_9/visible.mp4", help="Input video path or directory of frames.")
+    parser.add_argument("--video_path", default="/home/jacky/Desktop/samurai/scripts/visible.mp4", help="Input video path or directory of frames.")
     #parser.add_argument("--txt_path", required=True, help="Path to ground truth text file.")
     parser.add_argument("--model_path", default="sam2/checkpoints/sam2.1_hiera_tiny.pt", help="Path to the model checkpoint.")
     parser.add_argument("--video_output_path", default="demo.mp4", help="Path to save the output video.")
